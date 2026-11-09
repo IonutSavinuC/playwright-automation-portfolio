@@ -1,6 +1,6 @@
 # Playwright & TypeScript E2E Automation Framework
 
-![Playwright Tests](https://github.com/IonutSavinuC/playwright-automation-portfolio/actions/workflows/playwright.yml/badge.svg?branch= main)
+![Playwright Tests](https://github.com/IonutSavinuC/playwright-automation-portfolio/actions/workflows/playwright.yml/badge.svg?branch=main)
 
 
 
