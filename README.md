@@ -1,6 +1,7 @@
 # Playwright & TypeScript E2E Automation Framework
 
-[![Playwright Tests](https://github.com/IonutSavinuC/ playwright-automation-portfolio/actions/workflows/playwright.yml/badge.svg)](https://github.com/IonutSavinuC/playwright-automation-portfolio/actions)
+![Playwright Tests](https://github.com/IonutSavinuC/playwright-automation-portfolio/actions/workflows/playwright.yml/badge.svg?branch= main)
+
 
 
 A production-ready End-to-End (E2E) test automation framework built from scratch using **Playwright** and **TypeScript**. This project demonstrates industry-standard testing practices, robust architecture, and a modern CI/CD pipeline integration.
