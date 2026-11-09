@@ -9,8 +9,8 @@ test.describe('SauceDemo - Login Tests', () => {
         await loginPage.goto();
         await loginPage.login('standard_user', 'secret_sauce');
         
-        // Validăm că am ajuns pe pagina de inventar (magazinul propriu-zis)
-       await expect(page).toHaveURL(/.*inventory.*/);
+        // Validate that the user was redirected to the inventory page
+        await expect(page).toHaveURL(/.*inventory.*/);
     });
 
     test('should show error message with invalid credentials', async ({ page }) => {
@@ -19,7 +19,7 @@ test.describe('SauceDemo - Login Tests', () => {
         await loginPage.goto();
         await loginPage.login('wrong_user', 'wrong_password');
         
-        // Validăm apariția mesajului de eroare nativ al site-ului
+        // Validate that the native error message is visible and contains correct text
         await expect(loginPage.errorMessage).toBeVisible();
         await expect(loginPage.errorMessage).toContainText('Username and password do not match');
     });

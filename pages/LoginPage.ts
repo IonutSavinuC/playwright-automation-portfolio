@@ -6,6 +6,9 @@ export class LoginPage {
     readonly passwordInput: Locator;
     readonly loginButton: Locator;
     readonly errorMessage: Locator;
+    // New elements for logout functionality
+    readonly menuButton: Locator;
+    readonly logoutLink: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -13,6 +16,11 @@ export class LoginPage {
         this.passwordInput = page.locator('[data-test="password"]');
         this.loginButton = page.locator('[data-test="login-button"]');
         this.errorMessage = page.locator('[data-test="error"]');
+        
+        // Selector for the side menu button (three lines icon)
+        this.menuButton = page.locator('#react-burger-menu-btn');
+        // Selector for the logout link inside the menu
+        this.logoutLink = page.locator('[data-test="logout-sidebar-link"]');
     }
 
     async goto() {
@@ -23,5 +31,10 @@ export class LoginPage {
         await this.usernameInput.fill(username);
         await this.passwordInput.fill(password);
         await this.loginButton.click();
+    }
+
+    async logout() {
+        await this.menuButton.click();
+        await this.logoutLink.click();
     }
 }
